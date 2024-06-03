@@ -1,2 +1,2 @@
 # contact-list-app-test-playwright
-Playwright tests demo for Contact List App UI and API
+[Playwright](https://playwright.dev/) tests demo for Contact List App UI and API

@@ -1,0 +1,13 @@
+{
+  "name": "contact-list-app-test-playwright",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/EmeraldCHEN/contact-list-app-test-playwright.git",
+  "author": "Your Name <you@example.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.44.1",
+    "@types/node": "^20.14.0"
+  },
+  "scripts": {}
+}
