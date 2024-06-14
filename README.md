@@ -1,5 +1,5 @@
-# contact-list-app-test-playwright
-[Playwright](https://playwright.dev/) tests demo for Contact List App UI and API
+# example-test-playwright
+[Playwright](https://playwright.dev/) example tests: [UI](https://playwright.dev/docs/writing-tests) and [API](https://playwright.dev/docs/api-testing)
 
 - Run tests in headless mode: `yarn playwright test`
 
