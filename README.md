@@ -13,3 +13,7 @@ In this repository, you will find:
 - Run tests in headless mode: `yarn playwright test`
 
 - To open last HTML report run: `yarn playwright show-report`
+
+### Additional Info
+
+- [Running and debugging tests](https://playwright.dev/docs/running-tests)
