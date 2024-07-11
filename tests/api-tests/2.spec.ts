@@ -1,8 +1,9 @@
 import { test, expect } from '@playwright/test';
 const baseURL = 'https://reqres.in/api';
-const userName = 'Luffy2';
-const updatedUserName = 'Monkey D. Luffy2';
-
+const userName = 'Luffy';
+const userJob = 'Pirate';
+const updatedUserName = 'Monkey D. Luffy';
+const updatedUserJob = 'Pirate King';
 const testData = [
   { name: 'Luffy1', job: 'Pirate1' },
   { name: 'Zoro2', job: 'Swordsman2' },
@@ -19,23 +20,25 @@ test('has title', async ({ request }) => {
 test('Create a new user', async ({ request }) => {
   const newUser = {
     name: userName,
-    job: "Pirate"
+    job: userJob
   };
   const response = await request.post(`${baseURL}/users`, { data: newUser });
   expect(response.ok()).toBeTruthy();
   const user = await response.json();
-  expect(user.name).toBe(userName);
+  expect(user.name).toBe(newUser.name);
+  expect(user.job).toBe(newUser.job);
 });
 
 test('Update a user', async ({ request }) => {
   const updatedUser = {
     name: updatedUserName,
-    job: "Pirate King"
+    job: updatedUserJob
   };
   const response = await request.put(`${baseURL}/users/2`, { data: updatedUser });
   expect(response.ok()).toBeTruthy();
   const user = await response.json();
   expect(user.name).toBe(updatedUserName);
+  expect(user.job).toBe(updatedUserJob);
 });
 
 test('Delete a user', async ({ request }) => {
